@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankController : MonoBehaviour {
+public class EnemyController : MonoBehaviour
+{
 
     public float tankSpeed = 5f;
 
@@ -17,20 +18,28 @@ public class TankController : MonoBehaviour {
 
     public Transform[] raycastTransforms;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
 
 
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        rb.AddForce(new Vector2(tankSpeed, 0), ForceMode2D.Force);
+        if (dir)
+        {
+            rb.AddForce(new Vector2(tankSpeed, 0), ForceMode2D.Force);
+        }
+        else
+        {
+            rb.AddForce(new Vector2(-tankSpeed, 0), ForceMode2D.Force);
+        }
 
         CheckClimb();
-	}
+    }
 
     void ClimbForce()
     {

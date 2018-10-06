@@ -12,6 +12,9 @@ public class MapGenerator : MonoBehaviour {
 
     public float maxIncline = 0.35f;
 
+    public GameObject[] enemiesPrefabs;
+    
+
 	void Start () {
         player = FindObjectOfType<TankController>().gameObject;
 	}
@@ -31,5 +34,10 @@ public class MapGenerator : MonoBehaviour {
     float GetIncline() //Get incline or downcline
     {
         return Random.Range(-maxIncline, maxIncline);
+    }
+
+    void SpawnEnemy(int difficulty) //difficulty outta 100
+    {
+
     }
 }
