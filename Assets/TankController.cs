@@ -9,6 +9,8 @@ public class TankController : MonoBehaviour {
     public float climbRate = 5f;
     public float climbDistance = 0.5f;
 
+    public float health = 250;
+
     public LayerMask ignoreLayer;
 
     Rigidbody2D rb;
