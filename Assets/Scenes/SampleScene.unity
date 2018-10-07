@@ -1376,7 +1376,7 @@ MonoBehaviour:
   projectilePrefabs:
   - {fileID: 1064999131901952, guid: 25a8542425285cc4a9c92e3b8e9c1914, type: 2}
   turretPos: {fileID: 1295287574}
-  bulletForce: 15
+  bulletForce: 22.5
 --- !u!1 &1385041378
 GameObject:
   m_ObjectHideFlags: 0

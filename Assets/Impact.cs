@@ -4,13 +4,40 @@ using UnityEngine;
 
 public class Impact : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Sprite[] explosionSprites;
+
+    public float delay = 0.2f;
+
+    public float damage = 25f;
+
+    void Start ()
+    {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+    void Explode()
+    {
+        Destroy(gameObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        GetComponent<SpriteRenderer>().sprite = explosionSprites[Random.Range(0, explosionSprites.Length)];
+        if(col.gameObject.tag == "Enemy")
+        {
+            col.gameObject.GetComponent<EnemyManager>().health -= damage;
+        }
+        StartCoroutine(DelayExplode());
+    }
+
+    IEnumerator DelayExplode()
+    {
+        yield return new WaitForSeconds(delay);
+        Explode();
+    }
 }

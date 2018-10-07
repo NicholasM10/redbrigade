@@ -54,9 +54,10 @@ GameObject:
   - component: {fileID: 114189834304487484}
   - component: {fileID: 50353448968903908}
   - component: {fileID: 95302052013064668}
+  - component: {fileID: 114020127196381700}
   m_Layer: 0
   m_Name: enemy_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,6 +195,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114020127196381700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789990090796426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef28063006eedec41b27a546085475e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  explosionSprites:
+  - {fileID: 21300000, guid: 85cc82439dc542b4496ecdd6f77e8b94, type: 3}
+  - {fileID: 21300002, guid: 85cc82439dc542b4496ecdd6f77e8b94, type: 3}
+  - {fileID: 21300004, guid: 85cc82439dc542b4496ecdd6f77e8b94, type: 3}
 --- !u!114 &114189834304487484
 MonoBehaviour:
   m_ObjectHideFlags: 1
