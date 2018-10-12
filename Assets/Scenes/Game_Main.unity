@@ -384,7 +384,7 @@ MonoBehaviour:
   lastTileGenerated: {fileID: 55690250}
   distanceFromPlayer: 0
   tilePrefab: {fileID: 1316200152693976, guid: 41513abefa216274888c80af49763cd1, type: 2}
-  maxIncline: 0.125
+  maxIncline: 0.05
   enemiesPrefabs:
   - {fileID: 0}
   - {fileID: 0}
@@ -576,6 +576,16 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61700364917956378, guid: c4225bfe8a93d5a408e2948778622951,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.36134592
+      objectReference: {fileID: 0}
+    - target: {fileID: 61700364917956378, guid: c4225bfe8a93d5a408e2948778622951,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.24903542
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4225bfe8a93d5a408e2948778622951, type: 2}
@@ -984,7 +994,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.036548376, y: 0.15025473}
+  m_Offset: {x: -0.036548376, y: 0.1655736}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -995,7 +1005,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.92690325, y: 0.4639554}
+  m_Size: {x: 0.92690325, y: 0.43331766}
   m_EdgeRadius: 0
 --- !u!114 &1375126503
 MonoBehaviour:
@@ -1008,9 +1018,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055e387ea41b67f40871fcbec163ddc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankSpeed: 1.75
-  climbRate: 12
+  tankSpeed: 1.15
+  climbRate: 0.45
+  originalClimbRate: 0
   climbDistance: 0.3
+  maxVelocity: 4.75
   health: 250
   ignoreLayer:
     serializedVersion: 2
