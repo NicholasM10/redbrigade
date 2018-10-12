@@ -22,8 +22,6 @@ public class TankController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
-
-
 	}
 	
 	// Update is called once per frame
@@ -46,7 +44,7 @@ public class TankController : MonoBehaviour {
         {
             if (Physics2D.Raycast(raycastTransforms[1].transform.position, Vector2.right, climbDistance, ignoreLayer))
             {
-
+                Debug.Log("Invalid collision");
             }
             else
             {

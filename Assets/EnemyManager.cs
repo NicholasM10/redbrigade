@@ -8,6 +8,10 @@ public class EnemyManager : MonoBehaviour {
     public float health;
     public Slider healthBar;
     public Sprite[] explosionSprites;
+    public GameObject explosionObj;
+
+    public float ramDamageToItself = 25;
+    public float ramDamageToPlayer = 0;
 
     float maxHealth;
 
@@ -34,8 +38,17 @@ public class EnemyManager : MonoBehaviour {
     IEnumerator DelayDestroy()
     {
         yield return new WaitForSeconds(0.25f);
-
+        Instantiate(explosionObj, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            Debug.Log("Impacting with player");
+
+            health -= ramDamageToItself;
+        }
     }
 }
